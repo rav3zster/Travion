@@ -1,0 +1,38 @@
+name: wayfinder
+description: A cross-platform app to alert user before reaching destination
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Updated to latest versions for compatibility
+  geolocator: ^12.0.0
+  geocoding: ^3.0.0
+  
+  # Mappls package (only)
+  mappls_gl: ^1.0.8
+  # Added for making API calls to MapmyIndia Directions API
+  http: ^1.2.1
+
+  # Added for decoding the route polyline from the API response
+  flutter_polyline_points: ^2.0.0
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  
+  # Recommended for analysis and linting
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/origin.png
+    - assets/destination.png
