@@ -180,11 +180,11 @@ class _TrackPageState extends State<TrackPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
+                      const Row(
                         children: [
                           Icon(Icons.my_location, color: Colors.blueAccent),
-                          const SizedBox(width: 8),
-                          const Text('Current Location:',
+                          SizedBox(width: 8),
+                          Text('Current Location:',
                               style: TextStyle(fontWeight: FontWeight.bold)),
                         ],
                       ),
@@ -205,11 +205,11 @@ class _TrackPageState extends State<TrackPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
+                      const Row(
                         children: [
                           Icon(Icons.place, color: Colors.green),
-                          const SizedBox(width: 8),
-                          const Text('Destination:',
+                          SizedBox(width: 8),
+                          Text('Destination:',
                               style: TextStyle(fontWeight: FontWeight.bold)),
                         ],
                       ),
@@ -258,11 +258,11 @@ class _TrackPageState extends State<TrackPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
+                      const Row(
                         children: [
                           Icon(Icons.directions_walk, color: Colors.orange),
-                          const SizedBox(width: 8),
-                          const Text('Live Tracking:',
+                          SizedBox(width: 8),
+                          Text('Live Tracking:',
                               style: TextStyle(fontWeight: FontWeight.bold)),
                         ],
                       ),

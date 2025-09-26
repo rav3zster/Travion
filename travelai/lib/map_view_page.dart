@@ -9,8 +9,8 @@ class MapViewPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Map View')),
       body: mappls.MapplsMap(
-        initialCameraPosition: mappls.CameraPosition(
-          target: const mappls.LatLng(28.6139, 77.2090), // Default: Delhi
+        initialCameraPosition: const mappls.CameraPosition(
+          target: mappls.LatLng(28.6139, 77.2090), // Default: Delhi
           zoom: 12,
         ),
       ),

@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Permissions already present -->
+    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
@@ -39,10 +40,13 @@
         -->
         <meta-data
             android:name="com.mappls.sdk.maps.key"
-            android:value="9ddc663ea2a95a89b26331a1874fd2e2" />
+            android:value="9ddc663ea295a89b26331a1874fd2e2" />
         <meta-data
             android:name="com.mappls.sdk.services.key"
-            android:value="9ddc663ea2a95a89b26331a1874fd2e2" />
+            android:value="9ddc663ea295a89b26331a1874fd2e2" />
+        <meta-data
+            android:name="ATLAS_CLIENT_ID"
+            android:value="96dHZVzsAuvfO-QEzWWTEGgpRDWpGpFcXxYrsLOICdC9Af-Z0KA4QGz7cJYkYuWLxsvVbKJAf_zPPafqjv84iw==" />
             
     </application>
     

@@ -109,7 +109,7 @@ class _RouteAlertPageState extends State<RouteAlertPage> {
   Future<void> _getRouteFromMapmyIndia() async {
     if (_originLatLng == null || _destLatLng == null) return;
 
-    final String restApiKey = MapmyIndiaConfig.restMapSdkKey;
+    const String restApiKey = MapmyIndiaConfig.restMapSdkKey;
     if (restApiKey.isEmpty || restApiKey == 'YOUR_MAPPLS_REST_KEY') {
       setState(() {
         _alert =
@@ -271,11 +271,11 @@ class _RouteAlertPageState extends State<RouteAlertPage> {
                       // Current Location Section with live tracking toggle
                       Row(
                         children: [
-                          Icon(Icons.my_location, color: Colors.blueAccent),
+                          const Icon(Icons.my_location, color: Colors.blueAccent),
                           const SizedBox(width: 8),
-                          Text('Current Location:',
+                          const Text('Current Location:',
                               style:
-                                  const TextStyle(fontWeight: FontWeight.bold)),
+                                  TextStyle(fontWeight: FontWeight.bold)),
                           const Spacer(),
                           Switch(
                             value: _showLiveTracking,
@@ -314,7 +314,7 @@ class _RouteAlertPageState extends State<RouteAlertPage> {
                                 style: const TextStyle(
                                     fontSize: 16, color: Colors.black87)),
                       ),
-                      Divider(),
+                      const Divider(),
                       // Destination Input
                       TextField(
                         controller: _destinationController,
@@ -340,7 +340,7 @@ class _RouteAlertPageState extends State<RouteAlertPage> {
                 ),
               ),
               // Info Texts
-              Divider(),
+              const Divider(),
               if (_alert.isNotEmpty)
                 Padding(
                     padding: const EdgeInsets.only(top: 8.0),
@@ -373,14 +373,14 @@ class _RouteAlertPageState extends State<RouteAlertPage> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Current Coordinates:',
+                        const Text('Current Coordinates:',
                             style:
-                                const TextStyle(fontWeight: FontWeight.bold)),
+                                TextStyle(fontWeight: FontWeight.bold)),
                         Text(
                             'Lat: ${_currentPosition!.latitude.toStringAsFixed(6)}, Lng: ${_currentPosition!.longitude.toStringAsFixed(6)}'),
-                        Text('Destination Coordinates:',
+                        const Text('Destination Coordinates:',
                             style:
-                                const TextStyle(fontWeight: FontWeight.bold)),
+                                TextStyle(fontWeight: FontWeight.bold)),
                         Text(
                             'Lat: ${_destLatLng!.latitude.toStringAsFixed(6)}, Lng: ${_destLatLng!.longitude.toStringAsFixed(6)}'),
                         const SizedBox(height: 8),
@@ -471,8 +471,8 @@ class RouteTrackingPage extends StatefulWidget {
     required this.origin,
     required this.destination,
     required this.routePoints,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   State<RouteTrackingPage> createState() => _RouteTrackingPageState();
@@ -548,10 +548,10 @@ class _RouteTrackingPageState extends State<RouteTrackingPage> {
             padding: const EdgeInsets.all(16.0),
             child: Row(
               children: [
-                Icon(Icons.my_location, color: Colors.blueAccent),
+                const Icon(Icons.my_location, color: Colors.blueAccent),
                 const SizedBox(width: 8),
-                Text('Live Tracking:',
-                    style: const TextStyle(fontWeight: FontWeight.bold)),
+                const Text('Live Tracking:',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
                 const Spacer(),
                 Switch(
                   value: _showLiveTracking,

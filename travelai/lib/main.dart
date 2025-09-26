@@ -8,8 +8,11 @@ import 'package:mappls_gl/mappls_gl.dart';
 import 'mapmyindia_config.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   MapplsAccountManager.setMapSDKKey(MapmyIndiaConfig.restMapSdkKey);
   MapplsAccountManager.setRestAPIKey(MapmyIndiaConfig.restMapSdkKey);
+  MapplsAccountManager.setAtlasClientId(MapmyIndiaConfig.clientId);
+  MapplsAccountManager.setAtlasClientSecret(MapmyIndiaConfig.clientSecret);
   runApp(const WayFinderApp());
 }
 
@@ -86,7 +89,7 @@ class HomePage extends StatelessWidget {
                         vertical: 32, horizontal: 24),
                     child: Column(
                       children: [
-                        Icon(Icons.location_on,
+                        const Icon(Icons.location_on,
                             size: 72, color: Color(0xFF283593)),
                         const SizedBox(height: 18),
                         Text('Welcome to WayFinder!',
@@ -112,7 +115,7 @@ class HomePage extends StatelessWidget {
                       label: const Text('Start Tracking',
                           style: TextStyle(fontSize: 18)),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFF283593),
+                        backgroundColor: const Color(0xFF283593),
                         foregroundColor: Colors.white,
                         padding: const EdgeInsets.symmetric(
                             horizontal: 32, vertical: 16),
@@ -133,7 +136,7 @@ class HomePage extends StatelessWidget {
                       label: const Text('Route Alert (Online)',
                           style: TextStyle(fontSize: 18)),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFF3949ab),
+                        backgroundColor: const Color(0xFF3949ab),
                         foregroundColor: Colors.white,
                         padding: const EdgeInsets.symmetric(
                             horizontal: 32, vertical: 16),
@@ -153,7 +156,7 @@ class HomePage extends StatelessWidget {
                       icon: const Icon(Icons.map),
                       label: const Text('Map View'),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFF1976d2),
+                        backgroundColor: const Color(0xFF1976d2),
                         foregroundColor: Colors.white,
                         padding: const EdgeInsets.symmetric(
                             horizontal: 32, vertical: 16),
@@ -173,7 +176,7 @@ class HomePage extends StatelessWidget {
                       icon: const Icon(Icons.history),
                       label: const Text('Trip History'),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFF00897b),
+                        backgroundColor: const Color(0xFF00897b),
                         foregroundColor: Colors.white,
                         padding: const EdgeInsets.symmetric(
                             horizontal: 32, vertical: 16),
@@ -193,7 +196,7 @@ class HomePage extends StatelessWidget {
                       icon: const Icon(Icons.settings),
                       label: const Text('Settings'),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFF6d4c41),
+                        backgroundColor: const Color(0xFF6d4c41),
                         foregroundColor: Colors.white,
                         padding: const EdgeInsets.symmetric(
                             horizontal: 32, vertical: 16),
