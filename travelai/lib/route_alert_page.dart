@@ -29,25 +29,6 @@ class _RouteAlertPageState extends State<RouteAlertPage> {
   bool _showLiveTracking = false;
   mappls.Symbol? _liveLocationSymbol;
 
-  void _goToTrackingPage() {
-    if (_originLatLng != null && _destLatLng != null) {
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => RouteTrackingPage(
-            origin: _originLatLng!,
-            destination: _destLatLng!,
-            routePoints: _routePoints,
-          ),
-        ),
-      );
-    } else {
-      setState(() {
-        _alert = 'Please set a valid destination first.';
-      });
-    }
-  }
-
   @override
   void initState() {
     Geolocator.getPositionStream().listen((Position position) async {
@@ -271,11 +252,11 @@ class _RouteAlertPageState extends State<RouteAlertPage> {
                       // Current Location Section with live tracking toggle
                       Row(
                         children: [
-                          const Icon(Icons.my_location, color: Colors.blueAccent),
+                          const Icon(Icons.my_location,
+                              color: Colors.blueAccent),
                           const SizedBox(width: 8),
                           const Text('Current Location:',
-                              style:
-                                  TextStyle(fontWeight: FontWeight.bold)),
+                              style: TextStyle(fontWeight: FontWeight.bold)),
                           const Spacer(),
                           Switch(
                             value: _showLiveTracking,
@@ -374,13 +355,11 @@ class _RouteAlertPageState extends State<RouteAlertPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text('Current Coordinates:',
-                            style:
-                                TextStyle(fontWeight: FontWeight.bold)),
+                            style: TextStyle(fontWeight: FontWeight.bold)),
                         Text(
                             'Lat: ${_currentPosition!.latitude.toStringAsFixed(6)}, Lng: ${_currentPosition!.longitude.toStringAsFixed(6)}'),
                         const Text('Destination Coordinates:',
-                            style:
-                                TextStyle(fontWeight: FontWeight.bold)),
+                            style: TextStyle(fontWeight: FontWeight.bold)),
                         Text(
                             'Lat: ${_destLatLng!.latitude.toStringAsFixed(6)}, Lng: ${_destLatLng!.longitude.toStringAsFixed(6)}'),
                         const SizedBox(height: 8),

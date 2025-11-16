@@ -22,11 +22,48 @@ dependencies:
   # Added for decoding the route polyline from the API response
   flutter_polyline_points: ^2.0.0
 
+  # For local storage of bus stops and preferences
+  shared_preferences: ^2.2.2
+
+  # For RAG implementation
+  google_generative_ai: ^0.4.0
+  vector_math: ^2.1.4
+  
+  # For notifications (no alarm manager needed)
+  flutter_local_notifications: ^17.2.3
+  
+  # For on-device ML model inference
+  tflite_flutter: ^0.10.4
+  
+  # Play audio for alarms
+  audioplayers: ^6.5.1
+  # Pick audio files from device storage
+  file_picker: ^8.1.4
+  # Request runtime permissions (notifications, storage)
+  permission_handler: ^11.3.1
+  # Launch external apps/URIs (Spotify, etc.)
+  url_launcher: ^6.3.1
+  
+  # For local database (stop history and patterns)
+  sqflite: ^2.3.0
+  path_provider: ^2.1.1
+  path: ^1.8.3
+  
+  # For JSON serialization
+  json_annotation: ^4.8.1
+  
+  # For date formatting
+  intl: ^0.18.1
+  
   cupertino_icons: ^1.0.8
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  
+  # For JSON serialization code generation
+  build_runner: ^2.4.6
+  json_serializable: ^6.7.1
   
   # Recommended for analysis and linting
   flutter_lints: ^3.0.0
@@ -36,3 +73,5 @@ flutter:
   assets:
     - assets/origin.png
     - assets/destination.png
+    - assets/stop_classifier.tflite
+    - assets/scaler_params.json
