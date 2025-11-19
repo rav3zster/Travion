@@ -1,0 +1,45 @@
+======================================================================
+TRAVION - STOP CLASSIFICATION MODEL EVALUATION REPORT
+======================================================================
+
+TRAINING METRICS
+----------------------------------------------------------------------
+Final Training Accuracy:   0.9306
+Final Validation Accuracy: 0.9481
+Final Training Loss:       0.2145
+Final Validation Loss:     0.1658
+Total Epochs:              51
+
+TEST SET METRICS
+----------------------------------------------------------------------
+Test Accuracy: 0.9380
+
+DETAILED CLASSIFICATION REPORT
+----------------------------------------------------------------------
+                precision    recall  f1-score   support
+
+Traffic Signal     0.9050    0.9756    0.9390       410
+     Toll Gate     0.9141    0.9165    0.9153       395
+  Regular Stop     0.9604    0.9487    0.9545       409
+   Gas Station     0.9511    0.8861    0.9174       395
+     Rest Area     0.9641    0.9616    0.9629       391
+
+      accuracy                         0.9380      2000
+     macro avg     0.9389    0.9377    0.9378      2000
+  weighted avg     0.9388    0.9380    0.9379      2000
+
+CONFUSION MATRIX
+----------------------------------------------------------------------
+Predicted →
+True ↓
+
+               Traffic Si   Toll Gate  Regular St  Gas Statio   Rest Area
+Traffic Sign          400          10           0           0           0
+Toll Gate              25         362           7           1           0
+Regular Stop            9          10         388           2           0
+Gas Station             8          14           9         350          14
+Rest Area               0           0           0          15         376
+
+======================================================================
+Report generated successfully!
+======================================================================
